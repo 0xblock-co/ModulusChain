@@ -21,13 +21,13 @@ EnableLog = false
 MaxConns = 200
 
 [Etherman]
-URL = "http://your.L1node.url"
+URL = "https://goerli.infura.io/v3/cf298c535265448d8273f4d99ae80e5a"
 L1ChainID = 5
 PrivateKeyPath = "/pk/keystore"
 PrivateKeyPassword = "testonly"
-PoEAddr = "0x14cB06e8dE2222912138F9a062E5a4d9F4821409"
-MaticAddr = "0x4701Aa9471d7bfAc765D87dcb1Ea6BB23AD32733"
-GlobalExitRootManagerAddr = "0x762d09Ed110ace4EaC94acbb67b1C35D16C3297b"
+PoEAddr = "0x35B14aB1C8106500e4DDEB8576D84Ebf078E3526"
+MaticAddr = "0x9242600cF556dD4F333D6d46d10D245c7564A411"
+GlobalExitRootManagerAddr = "0x7cE48B29Df1204dbC2e9c10789a0240D48FC5A84"
 MultiGasProvider = false
 	[Etherscan]
 		ApiKey = ""
@@ -40,15 +40,16 @@ WriteTimeoutInSec = 60
 MaxRequestsPerIPAndSecond = 5000
 SequencerNodeURI = "https://public.zkevm-test.net:2083"
 BroadcastURI = "public-grpc.zkevm-test.net:61090"
-DefaultSenderAddress = "0x1111111111111111111111111111111111111111"
-	[RPC.DB]
-		User = "rpc_user"
-		Password = "rpc_password"
-		Name = "rpc_db"
-		Host = "zkevm-rpc-db"
-		Port = "5432"
-		EnableLog = false
-		MaxConns = 100
+DefaultSenderAddress = "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+
+[RPC.DB]
+User = "rpc_user"
+Password = "rpc_password"
+Name = "rpc_db"
+Host = "zkevm-rpc-db"
+Port = "5432"
+EnableLog = false
+MaxConns = 100
 
 [Synchronizer]
 SyncInterval = "2s"

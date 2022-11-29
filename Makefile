@@ -10,6 +10,13 @@ GOBINARY := zkevm-node
 GOCMD := $(GOBASE)/cmd
 $(eval BUILD_COMMIT:=$(shell git rev-parse --short HEAD))
 
+.PHONY: make-dir
+make-dir: 
+	mkdir -p ~/zkevm-node
+	mkdir -p ~/zkevm-node/.postgres-state
+	mkdir -p ~/zkevm-node/.postgres-pool
+	mkdir -p ~/zkevm-node/.postgres-rpc
+
 .PHONY: build
 build: ## Builds the binary locally into ./dist
 	$(GOENVVARS) go build $(LDFLAGS) -o $(GOBIN)/$(GOBINARY) $(GOCMD)
@@ -19,6 +26,7 @@ build-docker: ## Builds a docker image with the node binary
 	docker build -t zkevm-node --build-arg BUILD_COMMIT="$(BUILD_COMMIT)" -f ./Dockerfile .
 
 .PHONY: build-docker-nc
+
 build-docker-nc: ## Builds a docker image with the node binary - but without build cache
 	docker build --no-cache=true -t zkevm-node --build-arg BUILD_COMMIT="$(BUILD_COMMIT)" -f ./Dockerfile .
 
@@ -32,6 +40,16 @@ run-rpc: ## Runs all the services need to run a local zkEMV RPC node
 	sleep 2
 	docker-compose up -d zkevm-rpc
 
+.PHONY: run-explorer
+run-explorer:
+	docker-compose up -d zkevm-explorer-db
+	sleep 5
+	docker-compose up -d zkevm-explorer
+
+.PHONY: run-bridge
+	docker-compose up -d zkevm-bridge-db
+	docker-compose up -d zkevm-bridge-service
+	
 .PHONY: stop
 stop: ## Stops all services
 	docker-compose down
