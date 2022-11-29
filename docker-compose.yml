@@ -136,7 +136,6 @@ services:
           - LOGO_FOOTER=/images/blockscout_logo.svg
       command: ["/bin/sh", "-c", "mix do ecto.create, ecto.migrate; mix phx.server"]
 
-
   zkevm-explorer-zknode:
     container_name: zkevm-explorer-zknode
     image: hermeznetwork/zkevm-node
