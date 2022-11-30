@@ -13,8 +13,8 @@ services:
       - ZKEVM_NODE_POOL_HOST=zkevm-pool-db
     volumes:
       - ./test.keystore:/pk/keystore
-      - ./config/test.node.config.toml:/app/config.toml
-      - ./config/test.genesis.config.json:/app/genesis.json
+      - ./config/node-config-0x8b90.toml:/app/config.toml
+      - ./config/genesis-0x8b90.json:/app/genesis.json
     command:
       - "/bin/sh"
       - "-c"
@@ -33,8 +33,8 @@ services:
       - ZKEVM_NODE_RPC_BROADCASTURI=zkevm-broadcast:61090
     volumes:
       - ./test.keystore:/pk/keystore
-      - ./config/test.node.config.toml:/app/config.toml
-      - ./config/test.genesis.config.json:/app/genesis.json
+      - ./config/node-config-0x8b90.toml:/app/config.toml
+      - ./config/genesis-0x8b90.json:/app/genesis.json
     command:
       - "/bin/sh"
       - "-c"
@@ -65,8 +65,8 @@ services:
       - ZKEVM_NODE_STATEDB_HOST=zkevm-state-db
     volumes:
       - ./test.keystore:/pk/keystore
-      - ./config/test.node.config.toml:/app/config.toml
-      - ./config/test.genesis.config.json:/app/genesis.json
+      - ./config/node-config-0x8b90.toml:/app/config.toml
+      - ./config/genesis-0x8b90.json:/app/genesis.json
     command:
       - "/bin/sh"
       - "-c"
@@ -79,8 +79,8 @@ services:
       - ZKEVM_NODE_STATEDB_HOST=zkevm-state-db
     volumes:
       - ./test.keystore:/pk/keystore
-      - ./config/test.node.config.toml:/app/config.toml
-      - ./config/test.genesis.config.json:/app/genesis.json
+      - ./config/node-config-0x8b90.toml:/app/config.toml
+      - ./config/genesis-0x8b90.json:/app/genesis.json
     command:
       - "/bin/sh"
       - "-c"

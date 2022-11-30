@@ -34,8 +34,8 @@ const (
 
 // Public constants
 const (
-	DefaultSequencerAddress     = "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
-	DefaultSequencerPrivateKey  = "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
+	DefaultSequencerAddress     = "0xd002205b72f9eeda17ddb3d29c06c33f154e8b90"
+	DefaultSequencerPrivateKey  = "0x3b050ab86f36f7408404a3767bb72f3df7dad32935baa8af663207c028c81985"
 	DefaultSequencerBalance     = 400000
 	DefaultMaxCumulativeGasUsed = 800000
 

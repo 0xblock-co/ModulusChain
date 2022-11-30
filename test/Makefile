@@ -170,10 +170,10 @@ stop-zkprover-mock: ## Stops zkprover-mock
 
 .PHONY: run-explorer
 run-explorer: ## Runs the explorer
-	$(RUNEXPLORERL1DB)
+	# $(RUNEXPLORERL1DB)
 	$(RUNEXPLORERL2DB)
-	$(RUNEXPLORERJSONRPC)
-	$(RUNEXPLORERL1)
+	# $(RUNEXPLORERJSONRPC)
+	# $(RUNEXPLORERL1)
 	$(RUNEXPLORERL2)
 
 .PHONY: stop-explorer
@@ -233,7 +233,7 @@ run: ## Runs a full node
 	$(RUNSTATEDB)
 	$(RUNPOOLDB)
 	$(RUNRPCDB)
-	$(RUNL1NETWORK)
+	# $(RUNL1NETWORK)
 	sleep 2
 	$(RUNZKPROVER)
 	sleep 5
