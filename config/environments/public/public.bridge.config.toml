@@ -12,13 +12,13 @@ Port = "5432"
 MaxConns = 20
 
 [Etherman]
-L1URL = "https://goerli.infura.io/v3/cf298c535265448d8273f4d99ae80e5a"
-L2URLs = ["http://zkevm-rpc:8545"]
+L1URL = "https://goerli.infura.io/v3/51b9e8dcfe094e32986354b4fe93210a"
+L2URLs = ["http://zkevm-json-rpc:8545"]
 
 [Synchronizer]
 SyncInterval = "1s"
 SyncChunkSize = 100
-GrpcURL = "zkevm-node:61090"
+GrpcURL = "54.216.111.98:61090"
 
 [BridgeController]
 Store = "postgres"
@@ -30,9 +30,9 @@ HTTPPort = "8080"
 
 [NetworkConfig]
 GenBlockNumber = 1
-PoEAddr = "0x35B14aB1C8106500e4DDEB8576D84Ebf078E3526"
-BridgeAddr = "0xE68563356Aa005cF4f7a1076E2268e38511ad0de"
-GlobalExitRootManAddr = 0x7cE48B29Df1204dbC2e9c10789a0240D48FC5A84"0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9"
-MaticAddr = "0x9242600cF556dD4F333D6d46d10D245c7564A411"
+PoEAddr = "0x307e6BC482B8c4AF11E42C2f812142c2B6B94342"
+BridgeAddr = "0xcd8ECedd6d726c2E0Cd67EAd6F6206BeB1f6264A"
+GlobalExitRootManAddr = "0xA0263151308F2098CAd27509203983f5525E2DD4"
+MaticAddr = "0xe5f254F96711EC8220a876f4121325FB4c1009F1"
 L2BridgeAddrs = ["0x9d98deabc42dd696deb9e40b4f1cab7ddbf55988"]
 L1ChainID = 5

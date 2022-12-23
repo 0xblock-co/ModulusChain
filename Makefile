@@ -32,13 +32,15 @@ build-docker-nc: ## Builds a docker image with the node binary - but without bui
 
 .PHONY: run-rpc
 run-rpc: ## Runs all the services need to run a local zkEMV RPC node
-	docker-compose up -d zkevm-state-db zkevm-pool-db zkevm-rpc-db
+	docker-compose up -d zkevm-state-db zkevm-pool-db zkevm-rpc-db 
 	sleep 2
 	docker-compose up -d zkevm-prover
 	sleep 5
 	docker-compose up -d zkevm-sync
 	sleep 2
-	docker-compose up -d zkevm-rpc
+	docker-compose up -d zkevm-json-rpc
+	sleep 2
+	docker-compose up -d zkevm-broadcast
 
 .PHONY: run-explorer
 run-explorer:
@@ -47,6 +49,7 @@ run-explorer:
 	docker-compose up -d zkevm-explorer
 
 .PHONY: run-bridge
+run-bridge:
 	docker-compose up -d zkevm-bridge-db
 	docker-compose up -d zkevm-bridge-service
 	
